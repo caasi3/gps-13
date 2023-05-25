@@ -20,10 +20,10 @@ jobs:
         pip install pylint pytest
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        pylint practica-gps-ci-master/main.py
     - name: Test with coverage
       run: |
         python3 -m pip install coverage
-        pytest test.py
-        coverage run -m pytest test.py
+        pytest practica-gps-ci-master/test.py
+        coverage run -m pytest practica-gps-ci-master/test.py
         coverage report -m
