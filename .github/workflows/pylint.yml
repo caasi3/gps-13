@@ -24,6 +24,6 @@ jobs:
     - name: Test with coverage
       run: |
         python3 -m pip install coverage
-        pytest test.py
-        coverage run -m pytest test.py
+        pytest practica-gps-ci-master/test.py
+        coverage run -m pytest practica-gps-ci-master/test.py
         coverage report -m
